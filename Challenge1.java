@@ -101,7 +101,7 @@ public class Challenge1 {
          * @since 1
          */
         Boolean runCheckList(String str) {
-            Boolean control = false;
+            Boolean control = true;
             List<String> list = new ArrayList<>();
             // LIST
             list.add("Uno");
@@ -116,7 +116,7 @@ public class Challenge1 {
             list.add("Diez");
 
             if (list.contains(str)) {
-                control = true;
+                control = false;
             }
 
             return control;

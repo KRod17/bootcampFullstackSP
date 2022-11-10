@@ -4,8 +4,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- * Esta clase contiendo dos métodos, un método para generar una cadena de 10 caracteres de forma aleatoria
- * y otro método para validar si un string está en una lista.
+ * This class contains two methods
+ * First method to generate a string of 10 characters randomly.
+ * Second method to validate if a string is in a list.
  *
  * @author Keivys José Rodríguez - keivys17@gmail.com
  * @version 1.00.000 2022-11-05
@@ -21,18 +22,30 @@ public class Challenge1 {
      */
     public static void main(String[] args) {
 
+        List<String> list = new ArrayList<>();
+        // LIST
+        list.add("One");
+        list.add("Two");
+        list.add("Three");
+        list.add("Four");
+        list.add("Five");
+        list.add("Six");
+        list.add("Seven");
+        list.add("Eight");
+        list.add("Nine");
+        list.add("Ten");
+
         System.out.println("\nExecuting Exercise number one:");
-        StringGenerate hola = new StringGenerate();
-        hola.RunStringGenerate();
+        StringGenerate stringGenerate = new StringGenerate();
+        stringGenerate.runStringGenerate("a");
         System.out.println("");
         System.out.println("\nExecuting Exercise number two:");
         CheckList checkList = new CheckList();
-        System.out.println(checkList.runCheckList("Dos"));
-
+        System.out.println(checkList.runCheckList("Doce", list));
     }
 
     /**
-     * Esta clase es usada para generar una cadena de 10 caracteres de forma aleatoria.
+     * This class is used to generate a string of 10 characters randomly.
      *
      * @author Keivys José Rodríguez - keivys17@gmail.com
      * @version 1.00.000 2022-11-05
@@ -40,12 +53,14 @@ public class Challenge1 {
      */
     static class StringGenerate {
         /**
-         * RunStringGenerate método para generar una cadena de texto aleatoria.
+         * RunStringGenerate this method is used to generate a random text string.
          *
          * @author Keivys José Rodríguez - keivys17@gmail.com
          * @since 1
+         * @param x
+         * @return checkInput
          */
-        String RunStringGenerate() {
+        String runStringGenerate(String x) {
             Scanner sc = new Scanner(System.in);
             Random r = new Random();
             ArrayList<Integer> arrayNumbers = new ArrayList<Integer>();
@@ -58,18 +73,10 @@ public class Challenge1 {
             }
             try {
                 do {
-                    System.out.print("\nJust write "
-                            + (char) 34 + "Tipo A"
-                            + (char) 34 + " or "
-                            + (char) 34 + "Tipo B"
-                            + (char) 34 + ": ");
-
-                    checkInput = sc.nextLine();
-
-                    if (checkInput.equalsIgnoreCase("Tipo A")) {
+                    if (x.equalsIgnoreCase("A")) {
                         System.out.print("54");
                         bag = true;
-                    } else if (checkInput.equalsIgnoreCase("Tipo B")) {
+                    } else if (x.equalsIgnoreCase("B")) {
                         System.out.print("08");
                         bag = true;
                     }
@@ -86,7 +93,7 @@ public class Challenge1 {
     }
 
     /**
-     * Esta clase contiendo es usada para validar si un string está en una lista.
+     * This class is used to check if a string is in a list.
      *
      * @author Keivys José Rodríguez - keivys17@gmail.com
      * @version 1.00.000 2022-11-05
@@ -94,26 +101,15 @@ public class Challenge1 {
      */
     static class CheckList {
         /**
-         * runCheckList método para validar si un string esta en la lista.
-         * Retorna un Booleano.
+         * runCheckList This method is used to check if a string is in a list.
          *
          * @author Keivys José Rodríguez - keivys17@gmail.com
          * @since 1
+         * @param list
+         * @return control
          */
-        Boolean runCheckList(String str) {
+        Boolean runCheckList(String str, List<String> list) {
             Boolean control = true;
-            List<String> list = new ArrayList<>();
-            // LIST
-            list.add("Uno");
-            list.add("Dos");
-            list.add("Tres");
-            list.add("Cuatro");
-            list.add("Cinco");
-            list.add("Seis");
-            list.add("Siete");
-            list.add("Ocho");
-            list.add("Nueve");
-            list.add("Diez");
 
             if (list.contains(str)) {
                 control = false;

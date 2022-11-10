@@ -11,8 +11,10 @@ aleatoria con una longitud igual a 10 caracteres, y que serán únicamente
 números (0-9), por ejemplo “3845346790”. El método tendrá como entrada
 un valor tipo texto. La cadena de texto que se retorna tendrá las siguientes
 dos condiciones:
+
   i. Si el valor de entrada es igual a “Tipo A” la cadena de texto deberá
 iniciar en “54”
+
   ii. Si el valor de entrada es igual a “Tipo B” la cadena de texto deberá
 iniciar en “08”
 

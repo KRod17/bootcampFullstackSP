@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.Scanner;
 
 /**
  * This class contains two methods
@@ -55,13 +54,12 @@ public class Challenge1 {
         /**
          * RunStringGenerate this method is used to generate a random text string.
          *
-         * @author Keivys José Rodríguez - keivys17@gmail.com
-         * @since 1
          * @param x
          * @return checkInput
+         * @author Keivys José Rodríguez - keivys17@gmail.com
+         * @since 1
          */
         String runStringGenerate(String x) {
-            Scanner sc = new Scanner(System.in);
             Random r = new Random();
             ArrayList<Integer> arrayNumbers = new ArrayList<Integer>();
             String checkInput = "";
@@ -103,10 +101,10 @@ public class Challenge1 {
         /**
          * runCheckList This method is used to check if a string is in a list.
          *
-         * @author Keivys José Rodríguez - keivys17@gmail.com
-         * @since 1
          * @param list
          * @return control
+         * @author Keivys José Rodríguez - keivys17@gmail.com
+         * @since 1
          */
         Boolean runCheckList(String str, List<String> list) {
             Boolean control = true;

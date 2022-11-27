@@ -1,0 +1,135 @@
+body {
+  background-color: rgb(78, 175, 231);
+  height: 100%;
+  padding: 20px 20px 20px 20px;
+}
+
+.name {
+  color: #dbe4ed;
+  text-align: center;
+}
+
+/*Estilo del menu*/
+#menu {
+  background-color: rgb(40, 144, 170);
+  width: 80%;
+  height: 35px;
+  margin-left: 10%;
+  border-radius: 10px;
+}
+
+li {
+  /*Menu de navegacion*/
+  list-style: none;
+  float: right;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 2px;
+  color: aliceblue;
+  text-align: center;
+}
+
+li:hover {
+  background: rgb(97, 180, 240);
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+ul {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+/*Contenedor de la imagen e informaciones*/
+main {
+  padding-top: 20px;
+}
+
+/*Contenedor de la foto*/
+#imgContainer {
+  /* background-color: aqua; */
+  width: 80%;
+  float: left;
+  height: 300px;
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Contenedor de la informacion*/
+.infoContainer {
+  /* background-color: rgb(66, 190, 35); */
+  width: 35%;
+  float: right;
+  height: 300px;
+  margin-right: 10%;
+  /* border: 3px solid #dbe4ed; */
+}
+
+.infoAcordion {
+  padding-bottom: 30%;
+}
+
+/*Estilos de la foto*/
+#pic {
+  border-radius: 10px;
+  display: block;
+  width: 190px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Titulos*/
+.titles {
+  text-align: center;
+  color: #dbe4ed;
+  background-color: rgb(49, 158, 236);
+  border-radius: 10%;
+  border-top-right-radius: 80%;
+  border-bottom-left-radius: 80%;
+}
+
+/*Informacion*/
+.info {
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  color: #dbe4ed;
+  font-size: 18px;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: rgb(40, 144, 170);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  text-align: center;
+  margin-top: 1px;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color: rgb(97, 180, 240);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: rgb(78, 175, 231);
+  display: none;
+  overflow: hidden;
+  color: #dbe4ed;
+}
